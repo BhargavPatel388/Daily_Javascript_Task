@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vovel number task</title>
+</head>
+<body>
+    <script>
+        // Count number of Vowels in String
+        // Using function with argument
+        // Input : Umbrella
+        // Output: 3
+
+        vowel('Umbrella');
+        function vowel(a){  
+            var ee = [];    
+            var str = a; 
+            var trt = str.toLowerCase();
+            console.log(trt);           
+            const vowels = ["a", "e", "i", "o", "u"];
+            for(var i = 0 ; i < trt.length ; i++){
+                var yy = trt[i];
+                if(vowels.includes(yy)){
+                    var uu = yy;
+                    ee.push(uu);
+                }
+            }
+            console.log("Total vowel number",ee.length);
+ 
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object value found</title>
+</head>
+<body>
+    <script>
+
+    // 1. object found with string given by argument 
+        foundvalueObject({c : 123,b : 456,a : 789},"5");
+        function foundvalueObject(val1, val2){
+                for(var i = 0 ; i < Object.keys(val1).length ; i++){
+                    var test = Object.keys(val1); 
+                    if(test.includes(val2)){                    
+                        console.log("right");
+                    }
+                    else{
+                        console.log("wrong");
+                    }       
+                }
+                console.log("nice",test);             
+        }
+
+    // 2. 
+        var example = 'hello helo bhargav hello';
+        var charRepeats = function(str) {
+            for (var j=0; j<str.length; j++) {
+                if ( str.indexOf(str[j]) !== str.lastIndexOf(str[j]) ) {
+                    return false; 
+                }
+            }
+            return true;
+        }
+        console.log( charRepeats(example));
+        
+    //3. 
+        myFunction(10);
+        function myFunction(a){
+            var test1 = a.toString();
+            var test = test1.split("");
+            console.log(test);
+        }
+
+
+    //  4. 
+    getEveryNth([1, 2, 3, 4, 5, 6], 2)
+    function getEveryNth(arr, nth) {
+        const result = [];
+
+        for (let i = 1; i <= arr.length; i += nth) {
+            result.push(arr[i]);
+        }
+
+        console.log("4. result :",result);
+    }   
+
+    // 5. 
+    getnewarray([1,2,4],3);
+    function getnewarray(arrnew,value){
+        let test99 = arrnew
+        test99.unshift(value);
+        console.log("5. test99 : ",test99);
+    }
+
+    //6.
+        //     const names = ['Alex', 'Bob', 'Johny', 'Atta'];
+        // // convert array to th object
+        // const obj = Object.assign({}, names);
+        // // print object
+        // console.log(obj);
+      
+        const names = ['Alex', 'Bob', 'Johny', 'Atta'];
+            // create a new empty object
+        const obj = {};
+            // copy array elements to th object
+        for (let i = 0; i < names.length; i++) {
+            obj[i] = names[i];
+        }
+        console.log(obj);
+    </script>
+</body>
+</html>

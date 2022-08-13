@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array sort task</title>
+</head>
+<body>
+        <script>
+
+
+            /* Write a function that takes two arrays as arguments
+             Merge both arrays and remove duplicate values
+             Sort the merge result in ascending order
+             Return the resulting array */
+
+
+            // var arr1 = 343;
+            // var arr2 = ["zxzx","zxczx","ddd"];
+            // console.log("arr2 :", typeof arr2 ,arr2);
+            
+            // var ans = Array.isArray(arr1)
+            // console.log(ans);
+            // var bns = arr1 instanceof Array;
+            // console.log(bns);
+            // var abc = arr2.constructor === Array;
+            // console.log(abc);
+           
+             // 1. method
+            sortarray([1,2,6,4],[5,2,12,6,4,48,10]);          
+            function sortarray(arr1, arr2){
+                var array = [];
+                for(var i = 0 ; i < arr1.length ; i++){
+                    if(!arr2.includes(arr1[i])){
+                         array.push(arr1[i]);
+                    }
+                }
+                for(var j = 0 ; j < arr2.length ; j++){
+                    array.push(arr2[j]);
+                }
+                array.sort(function(a,b){ return a - b});
+                    console.log("final output :",array);
+
+            // 2. method
+
+            // var arr3 = arr1.concat(arr2);
+            //     console.log("hello merge array :",arr3); 
+            // var  arrunique = Array.from(new Set(arr3));
+            //     console.log("hello remove same array value :",arrunique);
+            // arrunique.sort(function(a, b){return a - b}); 
+            //     console.log("hello arr3 final : ",arrunique);
+         }
+        </script> 
+
+</body>
+</html>

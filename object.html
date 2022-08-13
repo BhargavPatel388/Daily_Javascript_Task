@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-Demo</title>
+</head>
+<body>
+    <h2>object demo</h2>
+    <h1 id="h1"></h1>
+    
+    <script>
+        var test = { };
+        console.log("hello test :",test);
+
+        var demo = {
+            name : "bhargav",
+            surname : "gadhesariya",
+            age : 21
+        };
+        var length = Object.keys(demo).length;
+        console.log("hello this is object length :", length);
+
+        document.querySelector("#h1").innerHTML = demo.name + " " +demo.surname + " " + demo.age;
+        console.log("hello demo object:", demo);
+        console.log("access using key :",demo.name);
+        console.log(demo['name']);
+        console.log("hello access with bracket Notation",demo["age"]);
+
+        var student = {
+            name : "abc",
+            lastname : "patel",
+            mark : {
+                abc : 55,
+                bcs : 85,
+            }
+        }
+        console.log("hello student :",student.mark.abc);
+
+        var hello = {
+            price : 505,
+            product : "food",
+            // funName : function() {
+                //     alert("thanks for access alert ");
+                // },
+                get functionwe() {
+                    return alert("hello bhargav patel");
+                }
+        }
+        console.log(hello.functionwe);
+        console.log("hello delete object value" , delete hello.funNamez);
+        // if('product2' in hello)
+        // {
+        //     alert("perfect");
+        // }
+        // else
+        // {
+        //     alert("not perfect ");
+        // }
+        var size = Object.keys(demo).length;
+        console.log("object length test :",size);
+ 
+        var fullname = {
+            firstname : 'bhargav',
+            lastname : 'patel',
+            full : function(){
+                return this.firstname + " " + this.lastname;
+            }
+        };
+        alert("get full name", fullname.full());
+
+        var rrr = {
+            name : "pro",
+            lastname: "123",
+            array : ["array","testing","pro-array"]
+        }
+        console.log("hello array object", rrr.array, rrr.array.length);
+       // console.log("delete object properties : ", delete rr.name);
+
+      var ttt = new Object();
+
+      ttt.course = "bca";
+      ttt.fee = 50000,
+      ttt.clgname = "pkm",
+      ttt.degree = function()
+      {
+            var degree = ttt.course + " " + ttt.fee + " " + ttt.clgname;
+            console.log("hello ttt demo :", degree);
+      }
+      console.log(ttt);
+    </script>
+</body>
+</html>

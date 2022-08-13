@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array-demo</title>
+</head>
+<body>
+
+    <script>
+        var gajban = [];
+        gajban[0] = 'hello';
+        gajban[1] = 'ajay';
+        gajban[2] = 'patel';
+
+        document.write("this is gajban ARRAY: ", gajban,"<br>");
+
+        var bike = ["Roket-3","bullet","splendor","fz-s"];
+        var car = ["bugati","mercidise","audi","bmw"];
+        var hybrid_collection = bike.concat(car);
+        document.write("hello concate : ", hybrid_collection,"<br>");
+
+        var trt = ["bhargav","is","good","boy"];
+        var tc = trt.toString("*");
+        document.write("hello to string :",tc ,"<br>");
+
+        var name = ["hello",'patel'];
+        var surname = [["bhargav"],'hru!'];
+        var fullname  = name.concat(surname);
+        console.log("hello bhargva please : ",fullname);
+
+        var filters = ["hello","mr","patel","bhargav","nice"];
+        console.log("hello this is copywithin metho",filters.copyWithin(2,3));
+
+       var student = ["name","id","password"];
+       var ggg = student.entries();
+
+       for(x of ggg)
+       {
+            console.log("this is entries method in javascript method",x ,"<br>")        
+       }
+
+
+       var uuu = [50,450,656,767,34,2];
+       console.log("oooo",uuu);
+       var bbb = uuu.every(checkeligible_age);
+       console.log("hhhhh",bbb);
+       console.log(checkeligible_age());
+
+       function checkeligible_age(){
+         return uuu > 30;
+       }
+
+       var product = ["abc","xyz","pqr"];
+       var  forge = "";
+       product.forEach(hellofunction);
+        
+       function hellofunction(value){
+            forge += value + "<br>";
+       }
+       console.log("hello forge :",forge ,"<br>");
+
+      
+    </script>
+</body>
+</html>

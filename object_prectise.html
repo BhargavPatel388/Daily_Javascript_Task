@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object prectice</title>
+</head>
+<body>
+    <script>
+        //1. Write a JavaScript program to delete the rollno property from the following object. Also print the object before or after deleting the property
+        var student = {
+            name : "David Rayy",
+            sclass : "VI",
+            rollno : 12 
+        };
+        delete student.rollno;
+        console.log(student );
+
+        //2.  Write a JavaScript program to display the reading status (i.e. display book name, author name and reading status) of the following books.
+        var library = [ 
+            {
+                title: 'bhagvat geeta',
+                author: 'Vyas',
+                readingStatus: true
+            },
+            {
+                title: 'chanakya niti',
+                author: 'Chanakya',
+                readingStatus: true
+            },
+            {
+                title: 'harry potter',
+                author: 'J. K. Rowling',
+                readingStatus: false
+            }];
+            for(var i = 0 ; i < library.length ; i++){
+                var book = "'" + library[i].title + "'" + library[i].author;
+                if(library[i].readingStatus){
+                    console.log("already read this book : ",book);
+                }     
+                else{
+                    console.log("you doesn't read this book ",book);  
+                }
+            }
+
+        // 3. get value in object 
+        let arr = [ { name:"string 1", value:"this", other: "that" },
+                    { name:"string 2", value:"this", other: "that" }];
+        let obj = arr.find(o => o.name === 'string 1');
+        console.log("hello get value :",obj);
+            
+        // 4. name are same as function name return in console this name and thats object which is same
+
+        search("bhargav", [{ name:"bhargav", surname:"patel"},
+                     { name:"deven", value:"meghnathi"},
+                     { name:"gabbar", value:"kushva"},
+                     { name:"neel", value:"umr"}]);
+        function search(nameKey, myArray){
+        for (var i=0; i < myArray.length; i++) {
+            if(myArray[i].name == nameKey){
+                console.log("this value are same as given name in function :",  myArray[i].name, myArray[i]);
+                // console.log("SORRY");
+            }
+        }            
+        }
+
+        // 4. one object same value remove and new add value object in new array
+
+        removeDuplicates([{ title: "C++", author: "Bjarne" },
+                        { title: "Java", author: "James" },
+                        { title: "Python", author: "Guido" },
+                        { title: "C++", author: "Guido" },
+                        { title: "Java", author: "James" }]);
+        function removeDuplicates(obj2) {
+            var books = obj2 ;
+            console.log("old object :",books);
+            let newArray = [];
+            let uniqueObject = {};
+            for (let i in books) {
+                objTitle = books[i]['title'];                
+                uniqueObject[objTitle] = books[i];
+                console.log("jjj",uniqueObject[objTitle]);
+            }
+            for (i in uniqueObject) {
+                console.log("hello i:",uniqueObject[i]);
+                newArray.push(uniqueObject[i]);
+            }
+            console.log("new object :",newArray);
+        }
+        
+    </script>   
+</body>
+</html>

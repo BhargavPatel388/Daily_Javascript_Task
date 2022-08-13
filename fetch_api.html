@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch api demo</title>
+</head>
+<body>
+    <button id="mybtn1">hello btn</button>
+    <button id="mybtn2">fetch button</button>
+    <div id="content"></div>
+
+    <script>
+        console.log("hello fetch api");
+
+        var btn = document.getElementById("mybtn1");
+        var content = document.getElementById("content");
+        console.log('hello btn : ', btn);
+        console.log('hello content : ', content);
+
+        // local file get data on your pc 
+        // function getdata(){
+        //     console.log("entry of get data function");
+        //     URL = 'bhargav.txt';
+        //     fetch(URL).then((Response) =>{
+        //         console.log("entry of fetch first");
+        //         return Response.text();
+        //     }).then((data) => {
+        //         console.log("entry of fetch second");
+        //         console.log(data);
+        //     });
+        // }
+
+        // online get data from url
+        // function getdata(){
+        //     console.log("entry of get data function");
+        //     URL = 'https://api.github.com/users';
+        //     fetch(URL).then((Response) =>{
+        //         console.log("entry of fetch first");
+        //         return Response.json();
+        //     }).then((data) => {
+        //         console.log("entry of fetch second");
+        //         console.log("hello Object",data);
+        //         var getdataObject = data;
+        //         console.log("hello getdataObject :", getdataObject.length);
+        //     });
+        // }
+        // console.log("before renning getdata");
+        // getdata();
+        // console.log("after renning getdata");
+
+        // post method 
+        function postdata(){
+            URL = 'https://dummy.restapiexample.com/api/v1/create';
+            data = '{"name":"bhargav","salary":"50,000","age":"21"}'
+            param = {
+                method : 'post',
+                Headers:{
+                    'content-type' : 'application/json'
+                },
+                body : data
+            }
+            fetch(URL, param).then(Response => Response.json())
+                .then(data => console.log("hdhdh",data))
+                console.log("sdss :",param)       
+            }
+        console.log("before renning POSTdata");
+        postdata()
+        console.log("after renning POSTdata");
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>milan</title>
+</head>
+<body>
+    <div id="hh">
+        <span class="open">hello</span><br>
+        <span class="open">bhargav</span><br>
+        <span class="open">milan</span> <br>
+    </div>
+    <div id="hello">
+
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, labore.</p>
+    <input type="text" value="">
+    <script>
+
+     document.querySelector("body > input").value = "hello";
+    // document.querySelector("#hh").style.color = "red";
+    
+
+     var jjj = document.getElementById("hh");
+     console.log(jjj);
+        var kkk = jjj.childNodes;
+        console.log("hello",kkk);
+
+     
+     const tt = document.createElement("span");
+        console.log(tt);
+     const uu = document.createTextNode("hello bhargav");
+        tt.appendChild(uu);
+        console.log(tt);
+     const yy = document.querySelector("#hh");
+        console.log(yy);
+        yy.append(tt);
+     
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prime number check</title>
+</head>
+<body>
+    <script>
+        // this function is return prime number when loop are not break
+        // console.log("*******-------THIS IS FIRST NEXT PRIME NUMBER PRINT FUNCTION(LOOP)-------*******");
+        // primenumber(5);
+        // function primenumber(value){
+        //     var val1 = value;
+        //     for(var i = val1 ; i <= 20 ; i++){
+        //         var nul = 0;
+        //         for (let j = 2; j < i; j++) {
+        //             if (i % j == 0) {
+        //                 nul = 1;
+        //                 // console.log("check",i);
+        //                 break;
+        //         }
+        //                 //console.log("hello j :",j);
+        //     }            
+        //         //console.log( (i > 1 && nul == 0));
+        //         if (nul == 0) {
+        //             console.log("next prime numeber is :",i);
+                    
+        //         }
+        //         // else{
+        //         //     console.log("this is not prime number : ",i);
+        //         // }
+        //     }          
+        // }
+        // console.log("*******-------THIS IS SECOND NEXT PRIME NUMBER PRINT FUNCTION-------*******");
+        // //this function is return only one prime number after given value
+        // next_primenumber(888);
+        // function next_primenumber(value){
+        //     var val1 = value;
+        //     var val2 = val1;
+        //     for(var i = val1 ; i <= val2++ ; i++){
+        //         console.log(val2);
+        //         // console.log("val1+9",val1+9);
+        //         var nul = 0;
+        //         for (let j = 2; j < i; j++) {
+        //             if (i % j == 0) {
+        //                 nul = 1;
+        //                 // console.log("check",i);
+        //                 break;
+        //             }                    
+        //           //console.log("hello j :",j);                
+        //     }            
+        //         //console.log( (i > 1 && nul == 0));
+        //         if (nul == 0) {                    
+        //             console.log("this is the next prime numeber is :",i);
+        //             break;
+        //         }
+        //     }          
+        // }
+
+
+
+        console.log(next_primenumber(6));
+        function next_primenumber(value){
+                function primeOrNot (value){
+                    var news2;
+                    for(i = 2; i <= value; i++){
+                        if(value % i == 0){
+                            news2 = i;
+                            break;
+                        }
+                    }
+                    console.log(news2);
+                    if (news2 == value){
+                        return false;
+                    }else{
+                        return true;
+                    }
+                }
+
+                if (primeOrNot(value) == false){
+                    return value;
+                }else{
+                    console.log("entered")
+                    var news;
+                    for(var j = value; true; j++){
+                        if(primeOrNot (j) == false){
+                            news = j;
+                            break;
+                        }
+                    }
+                    return news;
+                }
+        }
+
+        
+
+
+
+
+    </script>
+
+</body>
+</html>

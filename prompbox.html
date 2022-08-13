@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompbox-demo</title>
+</head>
+<body>
+    <h1 id="hy"></h1>
+    <h1>Welcome to our store</h1>
+    <script>
+        var test = parseInt(prompt("please enter value under 50"));
+        console.log("hello test: ",test);
+        for(var i = 0 ; i <= test ; i++)
+        {
+            if(test <= 50)
+            {
+                document.getElementById("hy").innerHTML = "right";
+                console.log("right");
+            }
+            else{
+                test = parseInt(prompt("please enter value under 50"));
+                console.log("wrong");
+            }
+        }
+    </script>
+</body>
+</html>

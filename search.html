@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+</head>
+<body>
+    <h1 id="h1"></h1>
+    <h2 id="h2"></h2>
+    <h3 id="h3"></h3>
+    <script>
+        var searchstr = "hello bhargav patel how are you!!!!";
+        document.getElementById("h1").innerHTML = searchstr.indexOf("bhargav");
+
+        var searchstr2 = "Are you fine???";
+        document.getElementById("h2").innerHTML = searchstr.indexOf("bhargav1");
+
+        var searchstr2 = "hello hopiant what is what";
+        document.getElementById("h3").innerHTML = searchstr.indexOf("what");
+
+        var test = ["hello", "hiii", "hello"];
+        console.log("hello test : ", test);
+
+        var str = "hello hru!!!";
+        console.log("hello startwith method",str.startsWith("hello"));
+
+        var strd = "www hello hru!!!";
+        console.log("hello startwith method",strd.startsWith("hello"));
+
+            // case sensitive 
+        var hello22 = "hello bhargav";
+        console.log("hello endwith method : ", hello22.endsWith("bhargav"));
+
+        var hello223 = "hello bhargav3";
+        console.log("hello endwith method : ", hello223.endsWith("bhargav"));
+
+        var firstname = "bhargav";
+        var lasrname = "patel";
+        var fullname = `your name ${firstname} ${lasrname}!`;
+        console.log("variable :",fullname);
+    </script>
+</body>
+</html>

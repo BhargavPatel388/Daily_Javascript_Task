@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array task</title>
+</head>
+<body>
+    <script>
+        
+        totalsum([1,2,3],2);      
+        function totalsum(arrValue, arrvalue2){          
+            var confirmArr = [];
+            for(var i = 0 ; i < arrValue.length ; i++)
+            {
+                if(arrValue[i] !== arrvalue2){
+                    confirmArr.push(arrValue[i]);
+                }    
+            }        
+           document.write(confirmArr);
+           console.log(confirmArr);
+        }
+       
+    </script>
+</body>
+</html>

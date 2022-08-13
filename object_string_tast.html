@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object string task</title>
+</head>
+<body>  
+    <script>
+        // Write a function that takes an object as argument
+        // Some of the property values contain empty strings
+        // Replace empty strings and strings that contain only white space with null values
+        // Return the resulting object
+
+        // myFunction({ a: 'a', b: 'b', c: '' })  |  Expected - { a: 'a', b: 'b', c: null }
+        // myFunction({ a: '', b: 'b', c: ' ', d: 'd' })   |   Expected - { a: null, b: 'b', c: null, d: 'd' }
+        // myFunction({ a: 'a', b: 'b ', c: ' ', d: '' })   |   Expected - { a: 'a', b: 'b ', c: null, d: null }
+
+        objectnull_value({ a : 'a', b : 'b', c : '', d : 'D'});
+        function objectnull_value(obj){
+            reverseObj = {};
+            console.log(Object.entries(obj));
+            for (let [key, value] of Object.entries(obj)) {
+                    if(value == ''){
+                        value = null;
+                    }
+                    reverseObj[key] = value;
+                }
+                console.log("hello reverseObj :",reverseObj);          
+        }
+
+        // 3. method
+        // objectnull_value({ a : 'a', '' : 'b', c : '', d : 'D', '' : '' });
+        // function objectnull_value(obj){
+        //     reverseObj = {};
+        //     console.log(Object.entries(obj));
+        //     for (let [key, value] of Object.entries(obj)) {
+        //            if(key == ''){
+                    //     key = null ;
+                    // }
+                    //     if(value == ''){
+                    //         value = null;
+                    //     }
+        //             reverseObj[key] = value;
+        //         }
+        //         console.log("hello reverseObj :",reverseObj);          
+        // }
+
+
+
+
+        // 2. method
+        // console.log(" 2. method ");
+        // object({ a: 'a', b: 'b', c: '',d: '','r' : '',ee :'rr' ,'bb': ''})
+        //     function object(obj){
+        //     var value = Object.values(obj);
+        //     var key = Object.keys(obj);
+        //     for (let i = 0; i < value.length; i++) {               
+        //         if (value[i] == '') {
+        //         obj[ key[i]] = null;
+        //         } 
+        //     }
+        //     console.log(obj)
+        //     }
+
+    </script>
+</body>
+</html>

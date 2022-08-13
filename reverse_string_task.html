@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reverse string task</title>
+</head>
+<body>
+    <script>
+        //Reverse a string without using inbuilt method
+        //Pass any string value as arguments
+
+        // Input "MilanRamani"    
+        // Output = 'inamaRnaliM'
+
+
+        console.log("string reverse task ");
+
+        var string , rev_string = [], test = '';
+        string = 'MilanRamani';
+        console.log("hello string :",string);
+        for(var i = string.length ; i >= 1 ; i--){
+            test += string[i-1];
+        }
+        console.log("hello reverse string :",test);
+
+
+        // function name(obj) {
+        //     this.firstName = 'Milan';
+        //     this.lastName = 'Ramani';
+        //     this.age = 22;
+        //     return obj            
+        // }
+        // var obj1 = new obj1 ['Bhargav','Gadhesariya',22];
+        // var obj2 = new obj2 ['Sagar','Chandresha',23];
+        // name(obj);
+        // console.log("This is my firstname"+obj1.firstName)
+
+        // function Book(type, author) {
+        //     this.type = type;
+        //     this.author = author;
+        // } 
+
+        // var book = new Book("Fiction", "Peter King");
+            var test = {};
+        function Book(type, author) {
+            this.type = type;
+            this.author = author;
+            this.getDetails = function () {
+                return this.type + " written by " + this.author;
+            }
+        }
+        var book = new Book("Fiction", "Peter King");
+        console.log(book.getDetails()); 
+
+
+        // 2. method (with array)
+
+        // var string , rev_string = [];
+        // string = 'MilanRamani';
+        // console.log("hello string :",string);
+        // for(var i = string.length ; i >= 0 ; i--){
+        //     rev_string.push(string[i]);
+        // }
+        // console.log(rev_string);
+        // var test_reverse = rev_string.join("");
+        // console.log("hello reverse string :",test_reverse);
+
+
+        
+    </script>
+</body>
+</html>

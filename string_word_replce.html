@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string word replace</title>
+</head>
+<body>
+<script>
+            // program to replace all occurrence of a string
+            // Input :- "My company name is BSquaresoft. BSquaresoft Company has two branches",
+            // BSquaresoft, Hopiant.
+
+            // Output:- "My company name is Hopiant. Hopiant Company has two branches"
+
+//in this task you just have to write a function which function take three arguments : string, A , B You have to replace all A in the string with B
+
+        line_word_replce(`"My company name is BSquaresoft. BSquaresoft Company has two branches"`,"BSquaresoft","Hopiant");
+        function line_word_replce(line,word1,word2){
+            var full_line = line;
+            var current_word = word1;
+            var replace_word = word2;
+            var test32 = /BSquaresoft/g;
+            // console.log("line : ",full_line);  
+            // console.log("current word : ",current_word);  
+            // console.log("replace word : ",replace_word);  
+
+            var test = full_line.replace(test32 , replace_word);
+            console.log("hello test :",test);
+        }
+</script>
+</body>
+</html>
+
+
+<!-- // var abc = full_line.split(" ");
+            // console.log(abc);
+            // var bbb = [];
+            // for(var i = 0 ; i <= abc.length ; i++){
+            //     if(abc[i] == current_word){
+            //         abc[i] = replace_word;
+            //     }
+            //     bbb.push(abc[i]);
+            //     var ttt = bbb.join(" ");
+            // }
+            // console.log("full line",ttt);
+            // } -->

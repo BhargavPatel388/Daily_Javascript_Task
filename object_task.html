@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object task</title>
+</head>
+<!-- https://www.javascripttutorial.net/array/javascript-sort-an-array-of-objects/#  -->
+<!-- https://www.programiz.com/javascript/examples/sort-array-objects -->
+<body>
+    <script>
+
+        //  objectsort( [{name: 'Sara', age:24},{name: 'John', age:24}, {name: 'Jack', age:25}] );
+        //  function objectsort(obj1){
+        //     var test = obj1;
+        //     var cc = {};
+        //         console.log("obj :",test);
+        //         console.log(Object.keys(test).length);
+        //     for(var i = 0 ; i < Object.keys(test).length ; i++){
+        //         // console.log("hello object", Object.values(test)[i]);
+        //         var yyy = Object.values(test)[i].name;
+        //         var ggg = Object.values(test)[i].age;
+
+        //         console.log("hello yyy :",yyy);
+        //         console.log("hello ggg :",ggg);
+        //         for (let h = 0; h < yyy.length  ; h++) {
+        //             cc[name] = name[h];
+        //             console.log(cc);
+        //         }
+              
+
+        //         for(var j = 0 ; j < Object.keys(yyy).length ; j++){
+        //             //console.log("hello j:", Object.values(yyy)[j]);
+        //             var eee = Object.values(yyy)[j];
+        //             // console.log("hello eee :",eee);
+                
+
+        //         }   
+        //     }
+        // }
+        
+        // 2. method
+        test([{name: 'amit', age:30},{name: 'Sara', age:24},{name: 'John', age:24}, {name: 'Jack', age:25},{name:"bhargav",age:19}]);
+        function test(arr4){
+            var arrplus = arr4;
+            arrplus.sort((a, b) => {
+                let fa = a.name.toLowerCase(),
+                    fb = b.name.toLowerCase();
+                // let fa = a.age,
+                // fb = b.age;
+                if (fa > fb) {
+                    return -1;
+                }
+                return 0;
+            });
+            console.log("gasdgsg",arrplus);
+        }
+
+
+        // 3. method
+        // dynamicSortMultiple([{name: 'Sara', age:24},{name: 'John', age:24}, {name: 'Jack', age:25}]);
+        // function dynamicSortMultiple(arguments){
+        //     const sorter2 = (sortBy) => (a, b) => a[sortBy].toLowerCase() > b[sortBy].toLowerCase() ? 1 : -1;
+
+        //     arguments.sort(sorter2('name'));
+        //     console.log("3. method", arguments);
+        // }
+
+    </script>
+</body>
+</html>

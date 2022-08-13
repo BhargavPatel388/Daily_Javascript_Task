@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax demo</title>
+</head>
+<body>  
+    <button id="btn1">press here</button>
+    <button id="btn2">no press</button>
+    <script>
+        console.log("this is ajax");
+
+        var btncontrol1 = document.getElementById('btn1');
+        var btncontrol2 = document.getElementById('btn2');
+console.log(btncontrol1);
+console.log(btncontrol2);
+        btncontrol1.addEventListener('click', clickfunction)
+        function clickfunction(){
+            const xhr = new XMLHttpRequest();
+            console.log("check xhr :", xhr);
+
+            xhr.open('GET', 'reverse_object.html',true);
+
+            xhr.onprogress = function(){
+                console.log("work in progress");
+            }
+            xhr.onload = function(){
+                console.log(this.responceText);
+                // document.write(this.responceText);
+            }
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

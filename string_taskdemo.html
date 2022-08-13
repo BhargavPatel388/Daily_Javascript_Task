@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task demo</title>
+</head>
+<body>
+    <p id="p"></p>
+    <h1 id="h1"></h1>
+    <h1 id="h2"></h1>
+
+    <script>
+        // given number find charcter on string 
+
+
+        // 1. method
+            var find = 4;
+            var stringtext = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, atque.";
+            console.log("hello",stringtext);
+            var stringLength = stringtext.length;
+                console.log("hello",stringtext[find-1]);
+         
+        // 2. method
+            var enterNUm = prompt("enter number ");
+            var text2 = "bhargav";
+            document.getElementById("h2").innerHTML = text2.charAt(enterNUm - 1);
+            if(enterNUm > text2.length)
+            {
+                document.write("You are enter number out of string range");
+            }
+        
+        //3. method
+            var name = "sagar";
+            var num = 5;
+            for (let i = 1; i < num; i++) {
+                var element = name[i];
+            }
+            console.log(element);   
+
+        // value = name.slice(3,4);
+        //  console.log(name.charAt(3));
+        // substring slice substr 
+        // document.write(value);
+        // value = name[num - 1];
+        // console.log(value);
+
+
+    </script>
+</body>
+</html>

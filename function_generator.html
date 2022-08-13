@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function generator</title>
+</head>
+<body>
+    <script>
+        function* generate() {
+            console.log("hello bhargav");   
+            yield 1;
+            console.log("hello bhargav 388");
+        }
+        let test = generate();
+        var yy = test.next();
+        console.log("hello test :",yy);
+
+        for (const g of test) {
+            console.log("new :",g);
+        }
+
+        function* showPrices(i) {
+            while (i < 8) {
+                yield i++;
+            }
+        }
+  
+        //creating an object for our function showPrices
+        const gfg = showPrices(1); 
+        
+        //return 0 because 0 value is passed to the showPrices yield expression
+        console.log("123 :",gfg.next().value); 
+        
+        // return 1
+        console.log("456 :",gfg.next().value); 
+        
+        //return 2
+        console.log("789 :",gfg.next().value); 
+
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amit task</title>
+</head>
+
+<body>
+    <script>
+
+        /* Write a function that takes an array (a) and a number (b) as arguments
+         Sum up all array elements with a value greater than b
+         Return the sum */
+         
+        //1. first method 
+
+        totalsum([1, 2, 3, 4, 5, 6, 7],5);      
+        function totalsum(arrValue, arrvalue2){
+            var arrprimary = arrValue;
+            var arrLength = arrprimary.length;
+            var arrsecondary = arrvalue2;
+            var test = "";
+                for(var i = 0 ; i < arrLength ; i++){
+                    test += arrprimary[i]; 
+                }
+                console.log("hello test",test);
+            const over2 = arrprimary.filter(mysumFunction);
+                function mysumFunction(value) {
+                    return value > arrsecondary;           
+                }
+            var rr = 0;
+                console.log("hello value",over2);
+                for(var j = 0 ; j < over2.length ; j++){
+                    rr += over2[j];
+                    console.log("ccfcc",rr);
+                }
+        }
+
+        // second demo 
+
+        // totalsum([1, 2, 3, 4, 5, 6, 7],[2,3,1,4,6]);      
+        // function totalsum(arrValue, arrvalue2){
+        //         var rr,tt = 0; 
+        //             for(var i = 0 ; i < arrValue.length ; i++){
+        //             test = arrValue[i]; 
+        //             console.log("vghfg",test);                     
+        //             for(var j = 0 ; j < arrvalue2.length ; j++){
+        //                 rr = arrvalue2[j];
+        //                 if(test == rr)
+        //                 {
+        //                     tt += test;
+        //                 }
+        //             }                         
+        //         }
+        //         console.log("demo1 : ",tt)
+        //         var aa = `milan`; var bb = `ramani`; 
+        //          console.log(`hello ${aa + bb}`);
+        //     }
+
+
+        // name([4, 6, 5, 8], [10, 5, 7, 6])
+        // function name(a, b) {
+        //     var demo = 0;
+        //     for (let i = 0; i < a.length; i++) {
+        //         const element = a[i];
+        //        // console.log(element);
+        //         for (let index = 0; index < b.length; index++) {
+        //             var element1 = b[index];
+        //             if (element == element1) {
+        //                 demo += element;
+        //             }
+        //         }
+        //     }
+        //     console.log("demo name",demo)
+        // }
+
+
+
+        
+        //2.method, function value is direct call in for loop not declare in function 
+
+        // totalsum([1, 2, 3, 4, 5, 6, 7],2);      
+        // function totalsum(arrValue, arrvalue2){
+        //     var test = "";
+        //         for(var i = 0 ; i < arrValue.length ; i++){
+        //             test += arrValue[i]; 
+        //         }                
+        //     const over2 = arrValue.filter(mysumFunction);
+        //         function mysumFunction(value) {
+        //             return value > arrvalue2;           
+        //         }
+        //     var rr = 0;
+        //         console.log("hello value",over2);
+        //         for(var j = 0 ; j < over2.length ; j++){
+        //             rr += over2[j];
+        //             console.log("sum of big value",rr);
+        //         }
+        // }
+
+        //3.reduce method 
+
+        // totalsum([1, 2, 3, 4, 5, 6, 7],5);      
+        // function totalsum(arrValue, arrvalue2){               
+        //     const over2 = arrValue.filter(mysumFunction);
+        //         function mysumFunction(value) {
+        //             return value > arrvalue2;           
+        //         }
+        //     console.log(over2.reduce((a, b) => a + b, 0));
+        // }
+
+        //4.for loop method
+
+        // totalsum([1, 2, 3, 4, 5, 6, 7],2);      
+        // function totalsum(arrValue, arrvalue2){               
+        //     var sum = 0;
+        //     for(var i = 0 ; i < arrValue.length ; i++)
+        //     {
+        //         if(arrValue[i] > arrvalue2){
+        //             sum += arrValue[i];
+        //         }
+        //     }
+        //     console.log("your total",sum);
+        // }
+            
+        
+
+    </script>
+</body>
+</html> 

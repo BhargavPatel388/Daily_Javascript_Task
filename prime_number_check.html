@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prime number check</title>
+</head>
+<body>
+    <script>
+        //2. method 
+        // let N = 526;
+        // function isPrime(n)
+        // {
+        //     if (n <= 1) {return false;}
+            
+        //     if (n%2 == 0){return false;}
+            
+        //     for (let i=5; i*i<=n; i=i+6){
+        //         if (n%i == 0 || n%(i+2) == 0)
+        //         return false;            
+        //     }
+        //     return true;
+        // }
+        // function nextPrime(N){
+        //     if (N <= 1)
+        //         return 2;        
+        //     let prime = N;
+        //     let found = false;
+        //     while (!found) {
+        //         prime++;
+        
+        //         if (isPrime(prime))
+        //             found = true;
+        //     }
+        //     return prime;
+        // }        
+        // console.log(nextPrime(N));
+
+        // 3.method
+        const num = 5;
+        const isPrime = (num) => {
+            let sqrtnum = Math.floor(Math.sqrt(num));
+            //console.log(sqrtnum);
+            let prime = num !== 1;
+            for(let i = 2; i < num + 1; i++){
+                if(num % i === 0){
+                    prime = false;
+                    break;
+                };
+            };
+            return prime;
+        }
+        const nextPrime = (num = 1) => {
+        while(!isPrime(++num)){
+        };
+        return num;
+        };
+        console.log(nextPrime(num));
+
+        // console.log("***************");
+        // console.log("****       ****");
+        // console.log("****      ****");
+        // console.log("****   ****");
+        // console.log("****      ****");
+        // console.log("****       ****");
+        // console.log("***************", " **");
+    </script>
+</body>
+</html>

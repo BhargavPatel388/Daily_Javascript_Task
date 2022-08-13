@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reverse  object value and key</title>
+</head>
+<body>
+<script>
+    //write a function which take an argument 
+        // reface this value's all keys with its values 
+        // function ({one : 1})
+        // output : { 1 : "one"}
+
+        objectreverse_value({bhargav : 388});
+        function objectreverse_value(obj){
+            reverseObj = {};
+            console.log("obj :",obj); 
+            for (let [key, value] of Object.entries(obj)) {
+                    console.log(Object.entries(obj));
+                var checkObj = key + " - " +  value ; 
+                    console.log("new object",checkObj);
+                reverseObj[value] = key;
+                //test[value.key , key.value];
+                console.log("hello reverseObj :",reverseObj);
+            }
+
+            // 2. method
+            const swapped = Object.fromEntries(Object.entries(obj).map(([k, v]) => [v, k]));            
+            console.log("hello swapped :",swapped)
+
+        }
+        
+</script>
+</body>
+</html>

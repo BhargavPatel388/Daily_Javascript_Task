@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sorting_task_milan</title>
+</head>
+<body>
+    <ul>
+        <div class="sort-element">
+          <li data-id="6">6</li>
+        </div>
+        <div class="sort-element">
+          <li data-id="7">7</li>
+        </div>
+        <div class="sort-element">
+          <li data-id="14">14</li>
+        </div>
+        <div class="sort-element">
+          <li data-id="10">10</li>
+        </div>
+        <div class="sort-element">
+          <li data-id="11">11</li>
+        </div>
+        <div class="sort-element">
+          <li data-id="17">17</li>
+        </div>
+        <div class="sort-element">
+          <li data-id="16">16</li>
+        </div>
+        <div class="sort-element">
+          <li data-id="5">5</li>
+        </div>
+        <div class="sort-element">
+          <li data-id="4">4</li>
+        </div>
+        <div class="sort-element">
+          <li data-id="15">15</li>
+        </div>
+        <div class="sort-element">
+          <li data-id="8">8</li>
+        </div>
+        <div class="sort-element">
+          <li data-id="55">55</li>
+        </div>
+      </ul>
+<script>
+        console.log("hello sorting");       
+       
+       
+            var indexes = document.querySelectorAll("[data-id]");
+              console.log("hello indexes:",indexes);
+            var indexesArray = Array.from(indexes);
+              console.log("hello indexesArray :",indexesArray);
+            let sorted = indexesArray.sort(comparator);
+            sorted.forEach(e =>
+                document.querySelector(".sort-element").appendChild(e)
+            );
+                       
+        function comparator(a, b) {            
+            return a.dataset.id - b.dataset.id;
+        }
+
+        // console.log(number);
+
+        // var ttt = [];
+        // ttt.push(number);
+        // console.log(ttt);
+
+        // function sortli(a,b){
+
+        // }
+
+        // const hh =document.querySelectorAll('li');
+        // var rrr = hh.length;
+        // console.log("hh:",rrr);
+
+        // for(var i = 0 ; i < rrr ; i++){
+        //     var number = hh.getAttribute('data-id');
+        //     var aa = hh[i].Value;
+        //     console.log("aa :",aa);
+        //  }
+          
+        // Function to sort Data
+        
+    </script>
+</body>
+</html>

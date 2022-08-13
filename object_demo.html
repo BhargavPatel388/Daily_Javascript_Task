@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object demo</title>
+</head>
+<body>
+    <script>
+        let student = {
+            name : "bhargav",
+            surname : "gadhesariya",
+        }
+        let age = {
+            age : 21
+        }
+
+       // add object in starting 
+        let test = Object.assign(age , student);
+        console.log(test);
+
+       // add object in last ...(spread operator)
+        let test2 = {...student , ...age};
+        console.log(test2); 
+
+
+        //  program to loop through an object using for...in loop
+
+        const stdid = { 
+            name: 'John',
+            age: 20,
+            hobbies: ['reading', 'games', 'coding'],
+        };
+        console.log("hello obj array :",Object.entries(stdid));
+        for (let [key, value] of Object.entries(stdid)) {
+            console.log(key + " - " +  value);
+        }
+
+        //  demo 
+
+            let car = { "model" : 2015 , "name" : "scorpio" };
+            let cars = { "model" : 2015 , "name" : "scorpio" };
+
+            let samekeyvalue = function (car , cars){
+                let objkey = Object.keys(car);
+
+                if(objkey.length === Object.keys(cars).length){
+                    return objkey.every(key => cars.hasOwnProperty(key) && cars[key] === car[key])
+                };
+                return false
+            };
+        //console.log(hasSameDataObj(car ,cars));
+    </script>
+</body>
+</html>

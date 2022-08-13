@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task</title>
+</head>
+<body>
+    <script>
+        console.log("hello task");
+     
+        // checkvalue([0,1,1],[0,1,0],[1,0,0],1);
+        // function checkvalue(a,b,c,d){
+        //     var allArray = a.concat(b , c); 
+        //     var blankArr = [];
+        //     console.log("all array :",allArray); 
+        //     for(var i = 0 ; i < allArray.length ; i++){
+        //         if(d == allArray[i]){
+        //             blankArr.push(allArray[i]);
+        //             console.log("blankArr :",blankArr);
+        //         }                
+        //     }
+        //     console.log("final same value length :",blankArr.length);
+        // }
+
+        checkvalue([[0,1,1],[0,1,0],[1,0,0]],0);
+        function checkvalue(a,b){
+            console.log(a,b);
+            counter = 0;
+            var blankArr = []; 
+            for(var i = 0 ; i < a.length ; i++){
+                blankArr = blankArr.concat(a[i]);
+            }  
+            // for(x of a){
+            //     blankArr.push(a[x]);
+            //     //console.log(blankArr);
+            // }
+            console.log(blankArr);
+            for(var j = 0 ; j < blankArr.length ; j++){
+                if(b == blankArr[j]){
+                    counter++;
+                }
+            }
+            console.log("final same value length :",counter);
+        }
+      
+    </script>
+</body>
+</html>
