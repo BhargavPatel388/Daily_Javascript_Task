@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add string reverse</title>
+</head>
+<body>
+    <script>
+
+        // Write a function that takes two strings (a and b) as arguments
+        // Beginning at the end of 'a', insert 'b' after every 3rd character of 'a' (pachad thi 3 no. pachhi second argument add thavi joiye)
+        // Return the resulting string
+        // myFunction('1234567','.')
+        // Expected : '1.234.567'
+        // myFunction('abcde','$')
+        // Expected :'ab$cde'
+        // myFunction('zxyzxyzxyzxyzxyz','w')
+        // Expected :'zwxyzwxyzwxyzwxyzwxyz'
+        // string_add('1234567','.');
+        // function string_add(a,b){
+        //     console.log(a,b);
+
+            
+        // 1. method
+        addpoint('BhargavPatel','.');
+        function addpoint(a,b){
+            var test = [];
+            for(var i = 1 ; i <= a.length ; i+1){    
+                test.push(a.slice(-3));
+                a =  a.slice(0, -3);
+            }
+            console.log(test.reverse().join(b));
+            console.log("dd",test);
+        }
+
+        //   2.method
+        //   function insertAfterEveryN(str, char, n) {
+        // const result = str.split('').reduce((accumulator, current, index) => {
+        //     if (index % n == 0) {
+        //     return accumulator + current + char;
+        //     }
+
+        //     return accumulator + current;
+        // },'');
+
+        // return result;
+        // }
+        // console.log(insertAfterEveryN('1234567', '.', 3));
+
+        // 3.method
+        // function chunk(str,a) {
+        //     console.log(str,a);
+        //     var arr = str.split('');
+        //     for(var i = arr.length-3 ; i >= 0 ; i-=3) {
+        //         console.log("ddd",arr[i]);                
+        //         arr.splice(i , 0 , a);
+        //     }
+        //     console.log("dddd",arr.join(''));            
+        // };
+        // chunk("1234567",'.');
+
+        // 4.method 
+        // myFunction('12345678', '.')
+        // function myFunction(a, b) {
+        // let result = [];
+        // while (a.length) {
+        //     console.log(a)
+        //     result.push(a.slice(-3));
+        //     a = a.slice(0, -3);
+        // }
+        
+        // console.log(result.reverse().join(b));
+        // }
+        
+    </script>
+</body>
+</html>

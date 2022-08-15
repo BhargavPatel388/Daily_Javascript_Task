@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        addpoint('BhargavPatel','.');
+        function addpoint(a,b){
+            var test = [];
+            for(var i = 1 ; i <= a.length ; i+1){    
+                test.push(a.slice(-3));
+                a =  a.slice(0, -3);
+            }
+            console.log(test.reverse().join(b));
+            console.log("dd",test);
+        }
+        
+        // var name = 'BhargavPatel';
+        // //var rrr = name.split("");
+        //     // console.log("pre rr:",rrr);
+            
+        // for(var i = 1 ; i <= name.length ; i+1){     
+        // // while(name.length){      
+        //     test.push(name.slice(-3));
+        //      name =  name.slice(0, -3);
+        //     // test1 += rrr[i-1];
+        //     // if(i == 3){
+        //     //     test.push(test1);
+        //     // }
+        //     // rrr.slice(0,3);
+        // }
+       
+        // // console.log("rr :",rrr);        
+        </script>
+        </body>
+</html>
