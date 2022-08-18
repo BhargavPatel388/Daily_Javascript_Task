@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" onkeypress="oneup();">
+    <button id="onkeyUp">click here milan</button> -->
+    <script>
+        // let a = prompt("enter value");
+        // let b = prompt("enter value");
+        // let temp;
+        // temp = a;
+        // a = b ;
+        // b = temp;
+        // console.log("hello a :", a);
+        // console.log("hello b :",b);
+
+        
+        
+        // var djdjd = {
+        //     name : "bhargav",
+        //     age : 21,
+        //     lstname : "patel",
+        //     hobby : {
+        //         name : "travelling",
+        //         name2 : "hdf"
+        //     }
+        // }
+        // console.log(djdjd);
+        // console.log(djdjd.hobby);
+        // //  function Scope() {
+        // //     if (b == 5) {
+        // //         console.log(b);
+        // //     }
+        // //  }
+
+        
+        
+        // function oneup(){
+        //     var keyup = document.querySelector("body > input[type=text]").value;
+        //                 console.log(keyup);
+        // }
+        
+        for(var i = 1 ; i <= 5 ;i++)
+        {
+            for(var j = 1; j <= i ; j++)
+            {
+                document.write(j);
+            }
+            document.write("<br>");
+        }
+
+        let arr = ['el1', 'el2', 'el3'];
+
+        arr.addedProp = 'arrProp';
+
+        
+        for (let elKey in arr) {
+        console.log("hello bhargav in ",elKey);
+        }
+        for (let elValue of arr) {
+        console.log("hello bhargav22 of",elValue)
+        }
+
+        let mymap = new Map();
+        console.log("hello map:",mymap);
+        let kite1 = "my name ",
+            kite2 = {},
+            kite3 = function(){};
+            console.log();
+        mymap.set(kite1,"this is string");
+        mymap.set(kite2, "this isblank obj");
+        mymap.set(kite3(),"this is blank function");
+        console.log("hello full map :", mymap);
+
+        var hhh = mymap.get(kite1);
+        console.log(hhh);
+        for(let [key , value] of mymap){
+            console.log("hello defaul :", [key,value]);
+}
+
+    //3. example
+    // var percent = prompt("enter you mark");
+    // var yyy;
+
+    // switch(percent){
+    //     case 1:
+    //         yyy = "pass";
+    //         break; 
+    //     case 2:
+    //         yyy = "you are fail";
+    //         break;
+    //     case 3:
+    //         yyy = "you are hello";
+    //         break;
+
+    //         default:
+    //             yyy = "hsdvbjkdfddhk";
+    // }
+
+    //console.log(yyy); 
+    // 2. example
+    var ttt = parseFloat(prompt("enter first number"));
+    var ggg = parseFloat(prompt("enter second number"));
+    var bbb = prompt("enter operator which operation perform you");
+    var qqq;
+
+    switch(bbb){
+        case '+':
+            qqq = ttt + ggg;
+            console.log(`${ttt} + ${ggg} = ${qqq}`);
+            break;
+        case'-':
+            qqq = ttt - ggg;
+            console.log(`${ttt} - ${ggg} = ${qqq}`);
+            break;
+        case '*':
+            qqq = ttt * ggg;
+            console.log(`${ttt} * ${ggg} = ${qqq}`);
+            break;
+        case '/':
+            qqq = ttt / ggg;
+            console.log(`${ttt} / ${ggg} = ${qqq}`);
+            break;
+
+        default : 
+            console.log("this operator is invalid");
+            break;
+    }
+
+    </script>
+</body>
+</html>

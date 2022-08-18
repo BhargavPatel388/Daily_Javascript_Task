@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectbox-lable task</title>
+    <style>
+        label{
+            margin: 0 25px;
+        }
+        select{
+            margin: 0 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        object = {  country: ["India", "Canada", "USA"], 
+                    city: ["Junagadh", "Rajkot", "Surat"], 
+                    village : ["Keshod","Khamdhrol","Khalilpur"]
+                }
+            //create main div of label and selectbox
+                var createDiv = document.createElement('div');
+                    createDiv.setAttribute("id", "lbl");
+                    document.body.appendChild(createDiv);
+                var selectDiv = document.createElement('div');
+                    selectDiv.setAttribute("id", "sel");
+                    document.body.appendChild(selectDiv);
+        
+        var lblid = document.querySelector('#lbl');
+            console.log("hello bhargav",Object.values(object));
+        var selectid = document.querySelector('#select'); 
+            console.log("hello ",selectid); 
+        var selectval = document.querySelector('#sel');      
+
+        // foreach loop for print label name and value of select option 
+        Object.keys(object).forEach(function(key) {
+            //console.log(key, object[key]);
+            var namelbl = key;
+            var textnode = document.createTextNode(namelbl);
+            var labeltag = document.createElement("label");
+                //console.log(labeltag);
+            labeltag.appendChild(textnode); 
+            document.getElementById("lbl").appendChild(labeltag);
+
+            var selvalue = object[key];
+            //console.log("nice",selvalue);
+            
+            var selectid = document.createElement("select");
+            selectid.setAttribute("id","selectid");
+            document.getElementById("sel").appendChild(selectid);
+
+
+            //console.log("selectid",selectid);
+                for(var j = 0 ; j < selvalue.length ; j++){
+                    // var option_textnode = document.createTextNode(selvalue[j]);      
+                    // var select_option = document.createElement("option");
+                    // select_option.appendChild(option_textnode);
+                    // document.getElementById("selectid").appendChild(select_option);  
+                    var element = selvalue[j];
+                        //console.log('hello bhargav',element); 
+                        var select_option = document.createElement('option');
+                        select_option.innerHTML += element ;
+                        //document.getElementById("sel").appendChild(select_option);
+                        selectid.appendChild(select_option);
+                }
+        });
+          
+    </script>
+</body>
+</html>

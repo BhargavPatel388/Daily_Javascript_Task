@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>replace task </title>
+</head>
+<body>
+    <script>
+        replce(' hello bhargav patel hello ', ',');
+        function replce(a,b){
+            console.log(a,b );
+             var str = a.trim();
+            var testarr = '';
+            for(var i = 0 ; i < str.length ; i++){
+                if(str[i] == ' '){
+                    testarr += b;
+                }
+                else{
+                    testarr += str[i];
+                }
+            }
+            console.log("testarr output :",testarr);
+        }
+
+        // function trimLeftSpace(str) {
+        //     var doneTrimming = false
+        //     var ret = ""
+        //     for (var index = 0; index < str.length; index++) {
+        //         if(str[index] !== ' '){
+        //             doneTrimming = true
+        //         }
+        //         if(doneTrimming){
+        //             ret += str[index]
+        //         }
+        //     }
+        //     var ret1 = ret.split('');
+        //     ret3 = ret1.join('');
+        //     console.log(ret3);
+        // }
+
+        // var result = trimLeftSpace("   Angry Bird   ");
+    </script>
+</body>
+</html>

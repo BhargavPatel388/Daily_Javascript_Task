@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        // Write a function that takes an array of strings as argument
+        // Group those strings by their first letter
+        // Return an object that contains properties with keys representing first letters
+        // The values should be arrays of strings containing only the corresponding strings
+        // For example, the array ['Alf', 'Alice', 'Ben'] should be transformed to
+        // { a: ['Alf', 'Alice'], b: ['Ben']}
+        // myFunction(['Berlin', 'Paris', 'Prague'])
+        // Expected: { b: ['Berlin'], p: ['Paris', 'Prague']}
+
+        addkeyObject(['Berlin','Berlin3', 'Berlin4' , 'Paris', 'Prague','raj','deven','Bhargav']);
+        function addkeyObject(a){
+            console.log(a);
+            var recentobj = {};
+            for (var i = 0; i < a.length; i++){    
+                var charkey = a[i].slice(0 , 1 );   
+                var value = [];      
+                var obj = a[i];
+                    console.log(obj);
+                if(recentobj[charkey] == undefined){
+                    value.push(obj)    
+                    recentobj[charkey] = value;
+                    
+                } 
+                else{
+                    recentobj[charkey].push(obj);
+                }                                        
+            }            
+            console.log("arr object:",recentobj);
+            
+            var test = {};
+            a.forEach(function callback(value, index) {
+                console.log(value);
+                var charkey2 = value.slice(0 , 1 ); 
+                console.log(test[charkey2] = value);
+                console.log(test);
+            });
+        }
+    </script>
+</body>
+</html>
