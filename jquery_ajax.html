@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Ajax</title>
+</head>
+
+<body>
+    <button id="btn">get method</button>
+        <p id="getp">hello dear bhargav</p>
+    <button id="postbtn"> post method</button>
+        <p id="postp"></p>
+
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                $('#getp').load('http://jsonplaceholder.typicode.com/posts/3');
+                console.log('after console');
+                $.get('https://jsonplaceholder.typicode.com/todos/3', function(data , status){
+                    console.log('data : ' + data + 'status : ' + status);
+                });
+            });
+
+            $('#postbtn').click(function(){
+                
+                $.post('https://jsonplaceholder.typicode.com/posts',
+                {   
+                    myData: 'This is my bhargv.'
+                },
+                function(data, status ){
+                    //console.log('hello post data :' + data + 'hello post status : ' + status);
+                    $('#postp').append('hello post data :' + data + 'hello post status : ' + status);
+                    // console.log(hello);
+                }).done(function() { console.log('Request done!'); })
+                .fail(function(jqxhr, settings, ex) { console.log('failed, ' + ex); });
+            });
+        });
+    </script>
+     <!-- "userId": 1,
+     "id": 3,
+     "title": "bhargav patel 388",
+     "body": "hello hopiant pvt ltd" -->
+</body>
+</html>

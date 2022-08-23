@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2 class="h2"> hello first person </h2>
+            <p class="p">your name bhargav ?</p>
+        <h2 class="h2"> hello first person </h2>
+            <p class="p">your name milan ?</p>
+        <h2 class="h2"> hello first person </h2>
+            <p class="p">your name sagar ?</p>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script>
+        console.log("hello bhargav");
+        $(document).ready(function(){
+            $('.p').css("display","none");
+            $(".h2").on("click", function() {                
+                $(this).next().slideToggle(500).css('background-color','red').css('color','yellow');            
+            });
+        });
+    </script>
+</body>
+</html>

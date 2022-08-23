@@ -1,0 +1,12 @@
+//remove same value in select box
+        // function removeduplicate(){
+        //     var mycode = {};
+        //     $(" #slctbx > option").each(function () {
+        //         if(mycode[this.text]) {
+        //             $(this).remove();
+        //         } else {
+        //             mycode[this.text] = this.value;
+        //         }
+        //     });
+        // }
+        // removeduplicate();
