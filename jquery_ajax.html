@@ -45,3 +45,32 @@
      "body": "hello hopiant pvt ltd" -->
 </body>
 </html>
+<!-- $(document).ready(function(){
+             
+    //              Image upload code
+                 $(document).on("change", "#file-input", upload.createFileInputHandler({
+                    onBegin: () => {
+                        $("#file-input").hide().next().hide();
+                    },
+                    onProgress: ({ progress }) => {
+                        $(".image-upload-lable .loding").addClass("activate");
+                        $(".image-upload-lable .loding").html(`${progress}%`);
+                        $(".image-upload-lable").css("border", "none");
+                    },
+                    onError: (error) => {
+                        $(".image-upload-lable").html(`Error:<br/>${error.message}`);
+                        $(".image-upload-lable").addClass("error-msg");
+                    },
+                    onUploaded: ({ fileUrl, fileId }) => {
+                        $(".image-upload-lable .loding").removeClass("activate");
+                        //$("#title").html(`File uploaded:<br/><br/><a href="${fileUrl}" target="_blank">${fileId}</a>`);
+                        $(".image-upload-lable").children().hide();
+                        $(".image-upload-lable").append(`<input type="hidden" id="ImageProp" name="properties[Image]" value="${fileUrl}"/><a href="${fileUrl}" target="_blank"><img src="${fileUrl}" /></a>`);
+                        $("#title").html(`<a href="${fileUrl}" target="_blank"><img src="${fileUrl}" /></a>`);
+                        console.log("test", fileId);
+                        $('#file-input').attr("value", `${fileUrl}`);
+                        $('#custom_image').attr("value", `${fileUrl}`);
+                        var img_url = document.querySelector("#title > a").href;
+                      $("#ImageProp").val(fileUrl);
+                    }
+                })); -->

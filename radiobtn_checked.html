@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radio-button checked task</title>
+</head>
+<body>
+    <div class="radiobtn">
+        <div>
+              <input type="radio" id="red" name="color" onclick="changecolor_size(this)" value="red" >
+              <label for="red" name='red'>red</label>
+              <input type="radio" id="green" name="color" onclick="changecolor_size(this)" value="green">
+              <label for="green" >green</label>
+              <input type="radio" id="blue" name="color" onclick="changecolor_size(this)" value="blue">
+              <label for="blue">blue</label>
+              <input type="radio" id="violet" name="color" onclick="changecolor_size(this)" value="violet">
+              <label for="violet">violet</label>
+        </div>
+    </div>
+    <div class="selectbx">
+        <select id="slctbx">
+            <option value="option">please select the above option</option>
+        </select>
+    </div>
+    <script src='jquery.min.js'></script>
+    <script>
+         object = { red: ['xl','l'], 
+                    green: ['m'], 
+                    blue : ['xxl','l','ml'],
+                    violet : ['bhargav','milan','sagar']
+                } 
+//1. method using jquery      
+    // $(document).ready(function(){
+    //     $("input").click(function(){
+    //         var colorselect = $(this).val();
+    //         //var colorselect = document.querySelector('input').value;
+    //         console.log("hello ",colorselect);
+    //         var optionsList;
+    //         var htmlString = "";
+    //         switch (colorselect) {
+    //             case "red":
+    //                 optionsList = object.red;
+    //                 break;
+    //             case "green":
+    //                 optionsList = object.green;
+    //                 break;
+    //             case "blue":
+    //                 optionsList = object.blue;
+    //                 break;   
+    //             case "violet":
+    //                 optionsList = object.violet;
+    //                 break;
+    //         }
+    //         // selected radiobutton options print in select box
+    //         for(var i = 0; i < optionsList.length; i++){
+    //             htmlString = htmlString+"<option value='"+ optionsList[i] +"'>"+ optionsList[i] +"</option>";
+    //         }
+    //         document.querySelector('#slctbx').innerHTML = htmlString;
+    //             // $("#slctbx").html(htmlString);
+    //     });
+    // });
+//2. method javascript
+    var test = document.querySelector('input').addEventListener( "click", changecolor_size);
+    function changecolor_size(){
+            var radios = document.getElementsByName('color');
+            var optionsList , htmlString = '';
+            for (var radio of radios){                                  
+                if (radio.checked) {
+                    switch (radio.value) {
+                        case "red":
+                            optionsList = object.red;
+                            break;
+                        case "green":
+                            optionsList = object.green;
+                            break;
+                        case "blue":
+                            optionsList = object.blue;
+                            break;   
+                        case "violet":
+                            optionsList = object.violet;
+                            break;
+                    }
+                }
+            }
+            console.log(optionsList);
+            for(var i = 0; i < optionsList.length; i++){
+                htmlString = htmlString+"<option id='bhargav' value='"+ optionsList[i] +"'>"+ optionsList[i] +"</option>";
+            }
+            document.querySelector('#slctbx').innerHTML = htmlString;
+    }
+    </script>
+</body>
+</html>

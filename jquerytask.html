@@ -15,6 +15,11 @@
         <h2 class="h2"> hello first person </h2>
             <p class="p">your name sagar ?</p>
     </div>
+    <div class="box" id="boxOne">#boxOne</div>
+    <div class="box" id="boxTwo">#boxTwo</div>
+    <div class="box" id="boxThree">#boxThree</div>
+    <button type="button" id="myBtn">Show ID List</button>
+
     <script src="jquery.min.js"></script>
     <script>
         console.log("hello bhargav");
@@ -22,6 +27,18 @@
             $('.p').css("display","none");
             $(".h2").on("click", function() {                
                 $(this).next().slideToggle(500).css('background-color','red').css('color','yellow');            
+            });
+
+            $("div").click(function(){
+                var idArr = '';
+                $(".box").each(function(){
+                    
+                    console.log($(this).attr('id'));
+
+                });
+                
+                // Join array elements and display in alert
+                console.log("idArr",idArr);
             });
         });
     </script>

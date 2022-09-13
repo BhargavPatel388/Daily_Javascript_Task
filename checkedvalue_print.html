@@ -5,90 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>radio-button checked task</title>
+    <style>
+        .unavailable_value{
+            background-color: grey;
+            color: yellow;
+        }
+    </style>
 </head>
 <body>
     <div class="radiobtn">
-        <div>
+        <div class="main">
               <input type="radio" id="red" name="color" onclick="changecolor_size(this)" value="red" >
-              <label for="red" name='red'>red</label>
+              <label for="red" class="red">red</label>
               <input type="radio" id="green" name="color" onclick="changecolor_size(this)" value="green">
-              <label for="green" >green</label>
+              <label for="green" class="green">green</label>
               <input type="radio" id="blue" name="color" onclick="changecolor_size(this)" value="blue">
-              <label for="blue">blue</label>
+              <label for="blue" class="blue">blue</label>
               <input type="radio" id="violet" name="color" onclick="changecolor_size(this)" value="violet">
-              <label for="violet">violet</label>
+              <label for="violet" class="violet">violet</label>
         </div>
     </div>
     <div class="selectbx">
-        <select id="slctbx">
-            <option value="option">please select the above option</option>
+        <select id="slctbx" class="selectelement">
+            <option  value="xl">xl</option>
+            <option  value="l">l</option>
+            <option value="m">m</option>
+            <option value="xxxl">xxxl</option>
+            <option value="xxl">xxl</option>
+            <option  value="ml">ml</option>
+            <option value="bhargav">bhargav</option>
+            <option  value="milan">milan</option>
+            <option  value="sagar">sagar</option>  
         </select>
-    </div>
-    <script src='jquery.min.js'></script>
+        
+    <!-- <script src='jquery.min.js'></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
     <script>
          object = { red: ['xl','l'], 
-                    green: ['m'], 
+                    green: ['m','xxxl'], 
                     blue : ['xxl','l','ml'],
-                    violet : ['bhargav','milan','sagar']
+                    violet : ['bhargav','milan','sagar','m']
                 } 
-//1. method using jquery      
-    // $(document).ready(function(){
-    //     $("input").click(function(){
-    //         var colorselect = $(this).val();
-    //         //var colorselect = document.querySelector('input').value;
-    //         console.log("hello ",colorselect);
-    //         var optionsList;
-    //         var htmlString = "";
-    //         switch (colorselect) {
-    //             case "red":
-    //                 optionsList = object.red;
-    //                 break;
-    //             case "green":
-    //                 optionsList = object.green;
-    //                 break;
-    //             case "blue":
-    //                 optionsList = object.blue;
-    //                 break;   
-    //             case "violet":
-    //                 optionsList = object.violet;
-    //                 break;
-    //         }
-    //         // selected radiobutton options print in select box
-    //         for(var i = 0; i < optionsList.length; i++){
-    //             htmlString = htmlString+"<option value='"+ optionsList[i] +"'>"+ optionsList[i] +"</option>";
-    //         }
-    //         document.querySelector('#slctbx').innerHTML = htmlString;
-    //             // $("#slctbx").html(htmlString);
-    //     });
-    // });
-//2. method javascript
-    var test = document.querySelector('input').addEventListener( "click", changecolor_size);
+
+//1. method javascript
+    //document.getElementsByTagName("option").style.color = "black";            
+    
     function changecolor_size(){
-            var radios = document.getElementsByName('color');
-            var optionsList , htmlString = '';
-            for (var radio of radios){                                  
-                if (radio.checked) {
-                    switch (radio.value) {
-                        case "red":
-                            optionsList = object.red;
-                            break;
-                        case "green":
-                            optionsList = object.green;
-                            break;
-                        case "blue":
-                            optionsList = object.blue;
-                            break;   
-                        case "violet":
-                            optionsList = object.violet;
-                            break;
-                    }
+        var radios = document.getElementsByName('color');
+        var optionsList , htmlString = '';
+        for (var radio of radios){                                  
+            if (radio.checked) {
+                switch (radio.value) {
+                    case "red":
+                        optionsList = object.red;
+                        break;
+                    case "green":
+                        optionsList = object.green;
+                        break;
+                    case "blue":
+                        optionsList = object.blue;
+                        break;   
+                    case "violet":
+                        optionsList = object.violet;
+                        break;
                 }
             }
-            for(var i = 0; i < optionsList.length; i++){
-                htmlString = htmlString+"<option value='"+ optionsList[i] +"'>"+ optionsList[i] +"</option>";
+        }
+        console.log("Your select value:",optionsList);
+            
+            $(".selectelement > option").each(function() {
+            // if option value in array,then add class 
+            if (optionsList.includes(this.value)) {
+                // set matching values to color 
+                console.log(true, this.value);
+                $(this).addClass("unavailable_value");
             }
-            document.querySelector('#slctbx').innerHTML = htmlString;
-    }
+            else{
+                // remove class from the unmatch value
+                console.log(false, this.value);
+                $(this).removeClass("unavailable_value");
+            }
+        }); 
+    } 
     </script>
 </body>
 </html>

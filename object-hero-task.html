@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero VS Heroen</title>
+</head>
+
+<body>
+    <p>Seleect Hero</p>
+    <div class="hero" id="hero">
+        <input type="radio" id="Akshay" class="hero" value="0" name="hero" data="0" checked>
+        <label for="Akshay" name='Akshay'>Akshay</label>
+
+        <input type="radio" id="Salman" class="hero" value="1" name="hero" data="1">
+        <label for="Salman" name='Salman'>Salman</label>
+
+        <input type="radio" id="Shahrukh" class="hero" value="2" name="hero" data="2">
+        <label for="Shahrukh" name='Shahrukh'>Shahrukh</label>
+
+        <input type="radio" id="Ajay" class="hero" value="3" name="hero" data="3">
+        <label for="Ajay" name='Ajay'>Ajay</label>
+
+        <input type="radio" id="Hrithik" class="hero" value="4" name="hero" data="4">
+        <label for="Hrithik" name='Hrithik'>Hrithik</label>
+    </div><br>
+    <p>Select Heroen</p>
+    <div class="heroen" id="heroen">
+        <input type="radio" id="Deepika" class="heroen" value="Deepika" name="Heroen" checked>
+        <label for="Deepika" name='Deepika'>Deepika</label>
+
+        <input type="radio" id="Priyanka" class="heroen" value="Priyanka" name="Heroen">
+        <label for="Priyanka" name='Priyanka'>Priyanka</label>
+
+        <input type="radio" id="Katrina" class="heroen" value="Katrina" name="Heroen">
+        <label for="Katrina" name='Katrina'>Katrina</label>
+
+        <input type="radio" id="Madhuri" class="heroen" value="Madhuri" name="Heroen">
+        <label for="Madhuri" name='Madhuri'>Madhuri</label>
+
+        <input type="radio" id="Kajol" class="heroen" value="Kajol" name="Heroen">
+        <label for="Kajol" name='Kajol'>Kajol</label>
+    </div>
+    <script>
+        var vandan = document.querySelectorAll('input');
+        for (let i = 0; i < vandan.length; i++) {
+            vandan[i].addEventListener("click", myFunction);
+        }
+        myFunction();
+        function myFunction() {
+            var object = [
+                {
+                    Deepika: "Housefull",
+                    Priyanka: "Aitraaz",
+                    Katrina: "Sooryavanshi",
+                    Madhuri: "Arzoo",
+                    Kajol: "Dekho Zara Dekho"
+                },
+                {
+                    Priyanka: "Salaam-E",
+                    Katrina: "Bharat",
+                    Madhuri: "Sajan",
+                    Deepika: "Saldeep",
+                    Kajol: "SalKa",
+                },
+                {
+                    Katrina: "Shahruka",
+                    Deepika: "New Year",
+                    Priyanka: "Priyasa",
+                    Madhuri: "Shahma",
+                    Kajol: "Dilwale"
+                },
+                {
+                    Madhuri: "Ajama",
+                    Katrina: "Aajkal",
+                    Priyanka: "Priyaaj",
+                    Kajol: "Aakolvadi"
+                },
+                {
+                    Kajol: "Hrika",
+                    Deepika: "Hardeep",
+                    Katrina: "hribilli",
+                    Priyanka: "HariPriya",
+                    Madhuri: "harima"
+                }
+            ]
+            
+            var val = document.querySelector('input[name="hero"]:checked').value;
+            var val1 = document.querySelector('input[name="Heroen"]:checked').value;
+            console.log(object[val][val1])
+            
+        }
+    </script>
+</body>
+
+</html>
